@@ -1,0 +1,23 @@
+.small-hidden {
+    @media (min-width: $break--x-sml) and (max-width: $break--med) {
+        display: none;
+    }
+}
+.medium-hidden {
+    @media (min-width: $break--med) and (max-width: $break--lrg) {
+        display: none;
+    }
+}
+.large-hidden {
+    @media (min-width: $break--lrg) and (max-width: $break--x-lrg) {
+        display: none;
+    }
+}
+.x-large-hidden {
+    @media (min-width: $break--x-lrg) {
+        display: none;
+    }
+}
+.hidden {
+    display: none;
+}

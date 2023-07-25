@@ -1,0 +1,222 @@
+//main
+
+.main-nav {
+    background-color: $dark-grey;
+    width: 100%;
+    color: $white;
+    margin-bottom: -15px;
+    margin-top: -15px;
+}
+
+.nav-item {
+    & {
+        a{
+            text-decoration: none;
+            color: $white;
+        }
+    }
+}
+
+//layout 
+
+.ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+//design 
+
+.nav-item {
+    height: 100px;
+    min-width: 130px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include mq(x-large) {
+        min-width: 170px;
+    }
+    z-index: 1;
+}
+.nav-link {
+    text-align: center;
+    text-transform: uppercase; 
+}
+.icon-nav {
+    @include themes($themes);
+    font-size: 1.3rem;
+}
+.p-small {
+    font-size: .6rem;
+    line-height: .7rem;
+    margin: 0;
+    padding-top: 10px;
+}
+.p-big {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+//software nav
+
+.software-nav {
+    &:hover {
+        background-color: $software;
+        .icon-nav-software {
+            color: $white;
+        }
+        .nav-menu {
+                background-color: darken($color: $software, $amount: 10%);
+            }
+    
+        &::after {
+            @extend %triangle;
+            border-top: 35px solid $software;
+           }
+    }
+}
+
+//it nav
+
+.it-nav {
+    &:hover {
+        background-color: $it;
+        .icon-nav-it {
+            color: $white;
+        }
+        .nav-menu {
+            background-color: darken($color: $it, $amount: 10%);
+        }
+        &::after {
+            @extend %triangle;
+            border-top: 35px solid $it;
+        }
+    }
+}
+
+//digital nav 
+
+.digital-nav {
+    &:hover {
+        background-color: $digital;
+        .icon-nav-digital {
+            color: $white;
+        }
+        .nav-menu {
+            background-color: darken($color: $digital, $amount: 10%);
+        }
+        &::after {
+            @extend %triangle;
+            border-top: 35px solid $digital;
+        }
+    }
+}
+
+// telecom nav
+
+.telecom-nav {
+    &:hover {
+        background-color: $telecom;
+        .icon-nav-telecom {
+            color: $white;
+        }
+        .nav-menu {
+            background-color: darken($color: $telecom, $amount: 10%);
+        }
+        &::after {
+            @extend %triangle;
+            border-top: 35px solid $telecom;
+        }
+    }
+}
+
+//web nav
+
+.web-nav {
+    &:hover {
+        background-color: $web;
+        .icon-nav-web {
+            color: $white;
+        }
+        .nav-menu {
+            background-color: darken($color: $web, $amount: 10%);
+        }
+        &::after {
+            @extend %triangle;
+            border-top: 35px solid $web;
+        }
+    }
+}
+
+//cyber nav
+.cyber-nav {
+    &:hover {
+        background-color: $cyber;
+        .icon-nav-cyber {
+            color: $white;
+        }
+        .nav-menu {
+            background-color: darken($color: $cyber, $amount: 10%);
+        }
+        &::after {
+            @extend %triangle;
+            border-top: 35px solid $cyber;
+        }
+    }
+}
+
+// developer nav
+
+.developer-nav {
+    &:hover {
+        background-color: $developer;
+        .icon-nav-developer {
+            color: $white;
+        }
+        .nav-menu {
+            background-color: darken($color: $developer, $amount: 10%);
+        }
+        &::after {
+            @extend %triangle;
+            border-top: 35px solid $developer;
+        }
+    }
+}
+
+
+// nav pop out menu 
+
+
+.nav-item:hover .nav-menu {
+    display: block;
+}
+.nav-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 198px;
+    padding: 50px 0;
+    z-index: 1;
+}
+.nav-menu-list {
+    @extend %flexbox;
+}
+
+.nav-menu-heading {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+.menu-item {
+    display: flex;
+    font-size: .8rem;
+    line-height: 2.5rem;
+    width: 33.33%;
+    margin-top: 20px;
+    padding-left: 10px;
+    @include mq(x-large){
+        font-size: 1rem;
+    }
+}

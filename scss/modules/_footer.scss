@@ -1,0 +1,193 @@
+footer {
+    background: $dark-grey;
+    color: $white;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    &{
+        h4 {
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-bottom: 24px; 
+        }
+        a {
+            @extend %visited;
+            text-decoration: none;
+        }
+        
+      }
+}
+
+// main flex box
+
+.footer {
+    @extend %flexbox;
+    flex-direction: column; 
+    padding-bottom: 10px;
+    width: auto;
+    @include mq(x-large) {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
+   
+
+//social flex box
+
+.footer-social {
+    @extend %flexbox;
+    margin-left: 0;
+    margin-bottom: 15px;
+    flex-direction: column;
+    @include mq(x-large){ 
+        flex: 1;
+    }
+}
+
+.footer-logo > img {
+  width: 250px;
+  height: auto;
+  @include mq(small) {
+    width: 320px;
+  }
+}
+
+.social-icons {
+    @extend %flexbox;
+    flex-direction: row;
+ }
+
+.btn-social{
+    text-align: center;
+    text-decoration:  none;
+    font-size: 26px;
+    line-height: 26px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 15px 22px 17px;
+    background-color: $black-grey;
+    @include mq(x-small) {
+       width: 35%;
+    }
+}
+
+.facebook .linkden .twitter .instagram {
+    flex-grow: 1;
+}
+
+.facebook:hover {
+    background-color: #3B5998;
+}
+
+.linkden:hover {
+    background-color: #0077B5;
+}
+.twitter:hover {
+    background-color: #00ACED;
+}
+.instagram:hover {
+    background-color: #D93175;
+}
+    
+
+// Information lists
+
+.info-container {
+    @extend %flexbox; 
+    flex-direction: column;
+    @include mq(medium) {
+        flex-direction: row;
+        width: 100%;
+    }
+    @include mq(x-large) {
+        flex-direction: row;
+        flex: 2;
+    }
+}
+
+.info-list {
+    flex-grow: 1;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    @include mq(medium) {
+        width: 35%;
+    }
+    @include mq(large) {
+        width: 20%;
+    }
+}
+
+footer ul{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+    &{
+        li{
+            @extend %action;
+            font-size: .8rem;
+            line-height: 1.3rem;
+        }
+    }
+}
+
+// copy right footer div
+
+
+
+.footer-bottom {   
+    display: flex;
+    flex-direction: column;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $black-grey;
+    color: $white;
+    font-size: .8rem;
+    & {
+        a {
+            @extend %visited;
+            text-decoration: none;
+        }
+    }
+}
+
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+        & {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+         }
+        }
+            @include mq(medium) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+.copyright-item {
+    display: flex;
+    @include mq(medium) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+            &:before {
+                content: "-";
+                margin: 5px;
+           }
+        }
+    }
+}
+.vis {
+    @include mq(medium) {
+        display: none;
+    }
+}
+

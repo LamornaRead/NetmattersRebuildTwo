@@ -1,0 +1,131 @@
+
+//newsletter form
+
+.newsletter-container {
+    background: $light-grey;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: $dark-grey;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-up {
+    &{
+        h2{
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: $font-weight--light;
+            margin: 0;
+            padding: 5px 0;
+        }
+    }
+}
+
+// beginning of flexbox
+
+.sign-up-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10px;
+    @include mq(large) {
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+//email and name fields 
+
+
+.input-heading {
+    display: inline-block;
+    font-weight: $font-weight--bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.input-style {
+    flex: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include mq(large) {
+        margin-right: 20px;
+        max-width: 570px;
+    }
+}
+
+.form-input {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    line-height: 1.4rem;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    outline: none;
+}
+
+.form-input:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
+//tick box and media
+.preference {
+  margin-bottom: 20px;
+}
+.marketing-checkbox {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.check-box {
+    appearance: none;
+    font: inherit;
+    max-width: 35px;
+    min-width: 35px;
+    height: 35px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 20px;
+    cursor: pointer;
+    text-align: center;
+    border: 3px solid $black-grey;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.check-box::before {
+    content: "";
+}
+
+.check-box:checked::before {
+    content: "\2713";
+    font-size: 1.3rem;
+    color: $white;
+}
+.check-box:checked {
+    background-color: $black-grey;
+}
+
+
+.media {
+    font-size: 1rem;
+    font-weight: $font-weight--bold;
+    line-height: 1.8rem;
+    min-width: 80%;
+}
+
+.media a {
+    color: $dark-grey;
+    text-decoration: underline;
+    &:hover {
+        color: $black-grey;
+    }
+}

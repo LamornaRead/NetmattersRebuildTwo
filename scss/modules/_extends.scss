@@ -1,0 +1,35 @@
+
+
+%visited {
+  &:visited {
+    color: $white;
+    border: 5px dotted $white;
+ }
+}
+
+%action {
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited {
+    text-decoration: underline;
+    color: $black-grey;
+ }
+}
+
+%triangle {
+  &::after {
+    position: relative;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 44px;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
+    z-index: 2;
+    @include mq(x-large) {
+      border-left: 85px solid transparent;
+      border-right: 85px solid transparent;
+  }
+  }
+}

@@ -1,0 +1,73 @@
+// image replacement
+
+@mixin img-replace($img, $w, $h, $disp: block) {
+   background-image: url('#{$path--rel}/#{$img}');
+   background-repeat: no-repeat;
+   width: $w;
+   height: $h;
+   $display: $disp;
+}
+
+//media queries 
+
+@mixin mq($break) {
+   @if $break == "x-small" {
+      @media (min-width: $break--x-sml) and (max-width: $break--sml) {
+         @content;
+      }
+   }
+   @else if $break == "small" {
+      @media (min-width: $break--sml + 1) {
+         @content;
+      }
+   }
+   @else if $break == "medium" {
+      @media (min-width: $break--med + 1) {
+         @content;
+      }
+   }
+   @else if $break == "large" {
+      @media (min-width: $break--lrg + 1) {
+         @content;
+      }
+   }
+   @else if $break == "x-large" {
+      @media (min-width: $break--x-lrg + 1) {
+         @content;
+      }
+   }
+   @else {
+      @error "#{$break} isnt a valid media query size!!";
+   }
+}
+
+// color mixins
+
+@mixin themes($map) {
+   @each $themes, $color in $map {
+      &-#{$themes} {
+         color: $color;
+      }
+   }
+}
+ 
+@mixin themes-bk($map) {
+   @each $themes, $color in $map {
+      &-#{$themes} {
+         background-color: $color;
+      }
+   }
+}
+
+// nav mixins 
+
+@mixin nav-box {
+   padding: 20px;
+   border: 1px solid rgba($color: $white, $alpha: .1);
+   outline: 1px solid rgba($color: #000000, $alpha: .25);
+   border-radius: 3px;
+   margin-bottom: 20px;
+   &:hover {
+       background-color: rgba($color: $white, $alpha: .1);
+   }
+}

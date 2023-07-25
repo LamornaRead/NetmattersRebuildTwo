@@ -1,0 +1,55 @@
+
+// Font stack
+
+$font-google--url : 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap' ;
+$font-primary     : 'Poppins', sans-serif;
+
+//Font weights
+
+$font-weight--light : 400;
+$font-weight--bold  : 600;
+
+// Base colors
+
+$black-grey : #212330;
+$white      : #fff;
+$dark-grey  : #323544;
+$light-grey : #DDDDDD;
+$blue-grey  : #67809F;
+$grey       : #848484;
+
+//icon and secton colors 
+
+$software   : #67809F;
+$it         : #4183D7;
+$digital    : #2ECC71;
+$telecom    : #D64541;
+$web        : #926FB1;
+$cyber      : #F62459;
+$developer  : #CE4125;
+
+$themes: (
+'software'   : #67809F,
+'it'         : #4183D7,
+'digital'    : #2ECC71,
+'telecom'    : #D64541,
+'web'        : #926FB1,
+'cyber'      : #F62459,
+'developer'  : #CE4125,
+);
+
+
+//path to assests
+
+$path--rel-img         : "../../img";
+$path--rel-img-logo    : "#{$path--rel-img}/logo";
+$path--rel-img-clients : "#{$path--rel-img}/clients";
+
+//Breakpoints
+
+$break--x-sml: 1px;
+$break--sml  : 460px;
+$break--med  : 768px;
+$break--lrg  : 992px;
+$break--x-lrg: 1243px;
+

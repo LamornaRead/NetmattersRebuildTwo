@@ -1,0 +1,287 @@
+.btn {
+    display: inline-block;
+    font-family: inherit;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    height: auto;
+    line-height: 35px;
+    font-size: 1rem;
+    padding: 5px 15px;
+    color: $white;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.btn-primary {
+    background-color: $dark-grey;
+}
+
+//news buttons
+
+
+.img-btn {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    @extend %visited;
+    padding: 0 10px;
+    font-size: .7rem;
+    line-height: 1.3rem ;
+    border-radius: 0;
+    z-index: 1;
+}
+
+
+.notables-btn {
+    background-color:$blue-grey;
+}
+.insights-btn {
+    background-color:$blue-grey;
+}
+
+.digital-btn {
+    background-color: $digital;
+}
+
+//welcome buttons 
+
+.btn-dark {
+    background-color: $black-grey;
+    font-size: 1.3rem; 
+    &:hover {
+        background-color: darken($black-grey , 10%);
+    }
+}
+
+//review buttons 
+
+.google-btn {
+    font-size: 1.3rem;
+    background-color: lighten(#166AF4, 10%);
+    &:hover {
+        background-color: #166AF4;
+    }
+}
+
+.trust-btn {
+    font-size: 1.3rem;
+    background-color: lighten(#009B69, 10%);
+    &:hover {
+        background-color: #009B69;
+    }
+}
+
+//carousel clients
+
+.swan-btn {
+    background-color: lighten(#566C88, 10%) ;
+    &:hover {
+        background-color: #566C88;
+    }
+    
+}
+.guide-btn {
+    background-color: lighten(#2A6EC6, 10%);
+    &:hover {
+        background-color: #2A6EC6;
+    }
+}
+.sweet-btn {
+    background-color: lighten(#26AB5F, 10%);
+    &:hover {
+        background-color: #26AB5F;
+    }
+}
+.traveller-btn {
+    background-color: lighten(#7E57A0, 10%);
+    &:hover {
+        background-color: #7E57A0;
+    }
+}
+
+// services buttons
+
+.software-btn {
+    background-color: $software;
+}
+.it-btn {
+    background-color: $it;
+}
+.digi-btn {
+    background-color: $digital;
+}
+.telecom-btn {
+    background-color: $telecom;
+}
+.web-btn {
+    background-color: $web;
+}
+.cyber-btn {
+    background-color: $cyber;
+}
+.developer-btn {
+    background-color: $developer;
+}
+
+//banners 
+
+.banner-btn-1 {
+    background-color: $web;
+    font-size: 1.3rem;
+    font-weight: $font-weight--light;
+    padding: 10px 30px;
+    &:hover {
+        background-color: darken($web, 10%);
+    }
+}
+.banner-btn-2 {
+    background-color: $software;
+    font-size: 1.3rem;
+    font-weight: $font-weight--light;
+    padding: 10px 30px;
+    &:hover {
+        background-color: darken($software, 10%);
+    }
+}
+.banner-btn-3 {
+    background-color: $it;
+    font-size: 1.3rem;
+    font-weight: $font-weight--light;
+    padding: 10px 30px;
+    &:hover {
+        background-color: darken($it, 10%);
+    }
+}
+.banner-btn-4 {
+    background-color: $digital;
+    font-size: 1.3rem;
+    font-weight: $font-weight--light;
+    padding: 10px 30px;
+    &:hover {
+        background-color: darken($digital, 10%);
+    }
+}
+.banner-btn-5 {
+    background-color: $telecom;
+    font-size: 1.3rem;
+    font-weight: $font-weight--light;
+    padding: 10px 30px;
+    &:hover {
+        background-color: darken($telecom, 10%);
+    }
+}
+.banner-btn-6 {
+    background-color: $web;
+    font-size: 1.3rem;
+    font-weight: $font-weight--light;
+    padding: 10px 30px;
+    &:hover {
+        background-color: darken($web, 10%);
+    }
+}
+.banner-btn-7 {
+    background-color: $cyber;
+    font-size: 1.3rem;
+    font-weight: $font-weight--light;
+    padding: 10px 30px;
+    &:hover {
+        background-color: darken($cyber, 10%);
+    }
+}
+
+// nav buttons
+
+.support-btn {
+    background-color: $it;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    &:hover {
+        background-color: darken($color: $it, $amount: 10%);
+    }
+
+}
+
+.contact-btn {
+    background-color: lighten($color: $grey, $amount: 10%);
+    font-size: 1rem;
+    padding: 10px 20px;
+    &:hover {
+        background-color: $grey;
+    }
+}
+
+// header button
+
+.phone-btn {
+    height: 55px;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: $dark-grey;
+}
+.search-btn {
+    height: 55px;
+    width: 55px;
+    color: $white;
+    font-size: 1.4rem;
+    border: none;
+    background-color: lighten($color: $grey, $amount: 10%);
+    overflow: hidden;
+}
+
+// main hamburger 
+
+.hamburger {
+    height: 45px;
+    padding-top: 7px;
+}
+
+.bar {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: $white;
+    margin: 6px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+//sticky header hamburger
+
+.hamburger-two {
+    height: 45px;
+    padding-top: 7px;
+}
+
+
+.bar-two {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: $white;
+    margin: 6px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.hamburger-two.active .bar-two:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-two.active .bar-two:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger-two.active .bar-two:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}

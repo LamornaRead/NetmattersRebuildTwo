@@ -1,0 +1,246 @@
+//heading and view work-top-bottom
+
+.service-heading {
+    & {
+        h2 {
+            font-size: 2.6rem;
+            margin-top: 20px;
+        }
+    }
+    @include mq(medium) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.view-work {
+    font-size: 1.4rem;
+    & {
+        a {
+            text-decoration: none;
+            @extend %action;
+        }
+    }
+
+}
+
+.bottom-service {
+    text-align: center;
+}
+
+
+//service container
+
+.service-container {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: .8rem;
+    padding: 30px;
+    border: 1px solid $light-grey;
+    box-shadow: 0 15px 20px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: .5s ease;
+    &:visited {
+        text-decoration: none;
+        color: $dark-grey;
+    }
+    & {
+        h2 {
+            font-weight: $font-weight--light;
+        }
+    }
+    @include mq(large) {
+        height: 350px;
+        padding: 20px;
+    }
+    @include mq(x-large) {
+        height: 360px;
+        padding: 30px;
+    }
+}
+
+.service-container:hover {
+    transform: translateY(-10px);
+    transition: .5s ease;
+}
+
+
+// software section
+
+
+.icon-background {
+    @extend %center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.icon-service {
+    @extend %center;
+    height: 30px;
+    width: auto;
+    padding-top: 25px;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+//background colors icons
+
+.soft {
+    background: #67809F;
+    color: $white;
+}
+.it {
+  background-color: #4183D7;
+  color: $white;
+}
+.digi {
+    background-color: #2ECC71;
+    color: $white;  
+}
+.telecom {
+    background-color: #D64541; 
+    color: $white; 
+}
+.web {
+    background-color: #926FB1; 
+    color: $white; 
+}
+.cyber {
+    background-color: #F62459;  
+    color: $white;
+}
+.developer {
+    background-color: #CE4125;
+    color: $white;  
+}
+
+
+//layout changes at break points
+
+
+.sml {
+    @include mq(medium) {
+        width: 50%;
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.med {
+    @include mq(large) {
+        width: 33.33%;
+        float: left;
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+.lrg {
+    @include mq(x-large) {
+        width: 25%;
+        float: left;
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.clear {
+    @extend %clearfix;
+}
+
+//hover
+
+.soft-con:hover {
+    background-color:  #67809F;
+    color: $white;
+    .soft {
+        background-color: $white;
+        color: #67809F;
+    }
+    .software-btn {
+        background-color: $white;
+        color: #67809F;
+    }
+}
+.it-con:hover {
+    background-color: #4183D7;
+    color: $white;
+    .it {
+        background-color: $white;
+        color: #4183D7;
+    }
+    .it-btn {
+        background-color: $white;
+        color: #4183D7;
+    }
+}
+.digi-con:hover {
+    background-color: #2ECC71;
+    color: $white;
+    .digi {
+        background-color: $white;
+        color: #2ECC71;
+    }
+    .digi-btn {
+        background-color: $white;
+        color: #2ECC71;
+    }
+}
+.tel-con:hover {
+    background-color: #D64541;
+    color: $white;
+    .telecom {
+        background-color: $white;
+        color: #D64541;
+    }
+    .telecom-btn {
+        background-color: $white;
+        color: #D64541;
+    }
+}
+.web-con:hover {
+    background-color: #926FB1;
+    color: $white;
+    .web {
+        background-color: $white;
+        color: #926FB1;
+    }
+    .web-btn {
+        background-color: $white;
+        color: #926FB1;
+    }
+}
+.cyb-con:hover {
+    background-color: #F62459;
+    color: $white;
+    .cyber {
+        background-color: $white;
+        color: #F62459;
+    }
+    .cyber-btn {
+        background-color: $white;
+        color: #F62459;
+    }
+}
+.dev-con:hover {
+    background-color: #CE4125;
+    color: $white;
+    .developer {
+        background-color: $white;
+        color: #CE4125;
+    }
+    .developer-btn {
+        background-color: $white;
+        color: #CE4125;
+    }
+}
