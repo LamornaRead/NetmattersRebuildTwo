@@ -621,3 +621,5 @@
                     </div>
                 </div>    
             </header>
+
+            <div class="overlay"></div>
