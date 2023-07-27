@@ -4,6 +4,9 @@ include("inc/header.php");
 
 ?>
 
+<div>
+    <h2>Our offices</h2>
+</div>
 
 <?php
 
