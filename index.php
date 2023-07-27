@@ -314,96 +314,17 @@ include("inc/header.php");
                 <div class="news-section">
                     <div class="container">
                         <div class="news-articles">
-                            <!-- first article-->
                             
-                            <div class="article-container">      
-                                <div class="notables">
-                                    <a class="article-link" href="#" target="_blank"></a>
-                                    <div class="article-image">
-                                        <a></a>
-                                        <a class="btn img-btn notables-btn" href="#" target="_blank">News</a>
-                                        <img src="img/news/march-notables-2023-A3oK-2.png" alt="Image for march notables">
-                                    </div>
-                                    <div class="text-block">
-                                        <a></a>
-                                        <div class="block-text">
-                                            <h3>March Notables 2023</h3>
-                                            <p>Each month, various departments recognise those employees and helped...</p>
-                                            <a class="btn notables-btn">Read More</a>
-                                        </div>                            
-                                        <div class="user">
-                                            <div class="avatar"><img src="img/avatars/netmatters-ltd-VXAv.webp" alt="Authors avatar."></div>
-                                            <div class="details">
-                                                <strong>Posted by Netmatters</strong>
-                                                <br>
-                                                6th April 2023
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div>
-                        
-                            
-                            <!--second article-->
+                    <!--php-->
+                        <?php
+                        include("inc/articles.php");
+                        ?>
+                    <!--php-->
 
-                            <div class="article-container">
-                                <div class="insights">
-                                    <a class="article-link" href="#" target="_blank"></a>
-                                    <div class="article-image">
-                                        <a></a>
-                                        <a class="btn img-btn insights-btn" href="#" target="_blank">Insights</a>
-                                        <img src="img/news/5-signs-your-E7Sj-2.png" alt="Image for insights news card.">
-                                    </div>
-                                    <div class="text-block">
-                                        <a></a>
-                                        <div class="block-text">
-                                            <h3>5 Signs Your Buisness needs an Intranet Solut...</h3>
-                                            <p>Being able to communicate and collaborate is essential to any organisation's success in...</p>
-                                            <a class="btn insights-btn">Read More</a>
-                                        </div>
-                                        <div class="user">
-                                            <div class="avatar"><img src="img/avatars/alex-hall-UIuf.webp" alt="Authors avatar."></div>
-                                            <div class="details">
-                                                <strong>Posted by Alex Hall</strong>
-                                                <br>
-                                                31st of March 2023
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--third article-->
-
-                            <div class="article-container" id="hide">
-                                <div class="digital">
-                                    <a class="article-link" href="#" target="_blank"></a>
-                                    <div class="article-image">
-                                        <a></a>
-                                        <a class="btn img-btn digital-btn" href="#" target="_blank">News</a>
-                                        <img src="img/news/-GezN-2.png" alt="Image for digital news card">
-                                    </div>
-                                    <div class="text-block">
-                                        <a></a>
-                                        <div class="block-text">
-                                            <h3>Jim Becomes the Netmatters Digital Director</h3>
-                                            <p>Netmatters continues to grow year on year: this means the management team is growing in line with ou...</p>
-                                            <a class="btn digital-btn">Read More</a>
-                                        </div>
-                                        <div class="user">
-                                            <div class="avatar"><img src="img/avatars/tessa-woodrow-7iGC.webp" alt="Authors avatar."></div>
-                                            <div class="details">
-                                                <strong>Posted by Tessa Dempsey</strong>
-                                                <br>
-                                                29th March 2023
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
+               
                 <!--view all-->
                 <div class="container">
                     <div class="view-all medium-hidden large-hidden x-large-hidden">
