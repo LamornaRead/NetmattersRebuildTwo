@@ -7,7 +7,12 @@
 
    foreach($article as $row => $item) {
 
-    echo "<div class=\"article-container\">";
+    
+    if ($item['main_class'] == "digital") {
+        echo "<div id=\"hide\" class=\"article-container\">";
+    } else {
+        echo "<div class=\"article-container\">";
+    }
     echo "<div class=\"" . $item['main_class'] . "\">";
     echo "<a class=\"article-link\" href=\"#\" target=\"_blank\"></a>";
     echo "<div class=\"article-image\">";
