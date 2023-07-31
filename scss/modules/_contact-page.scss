@@ -37,11 +37,10 @@
 .buisness-info {
     font-weight: $font-weight--bold;
     font-size: 1rem;
-    &{ 
-        p {
-            padding: 10px 0;
-        }
-    }
+}
+
+.buisness-info-text {
+    padding: 10px 0;
 }
 
 .sales-email {
@@ -58,6 +57,8 @@
     background-color: $light-grey;
     padding: 30px;
     border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .label {
@@ -69,6 +70,7 @@
     outline: none;
     margin: 5px 0;
     padding: 10px 15px;
+    width: 100%;
 }
 
 .input-field:focus {
@@ -76,3 +78,35 @@
     border: 1px solid rgba(81, 203, 238, 1);
 }
 
+.con-mess {
+    height: 100px;
+}
+
+.require-text {
+    text-align: center;
+    font-size: .8rem;
+}
+
+//form layout
+
+.input-box {
+    @include mq(large) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.col-1 {
+    @include mq(large) {
+        width: 48%;
+    }
+}
+
+.form-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}

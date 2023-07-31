@@ -2657,46 +2657,85 @@ a {
   font-size: 1rem;
 }
 
-/* line 41, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
-.buisness-info p {
+/* line 42, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.buisness-info-text {
   padding: 10px 0;
 }
 
-/* line 47, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 46, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .sales-email {
   font-size: 1.7rem;
   color: #926FB1;
 }
 
-/* line 50, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 49, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .sales-email:hover {
   text-decoration: underline;
 }
 
-/* line 57, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 56, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .contact-form {
   background-color: #DDDDDD;
   padding: 30px;
   border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-/* line 63, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 64, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .label {
   font-size: 1rem;
   font-weight: 600;
 }
 
-/* line 68, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 69, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .input-field {
   outline: none;
   margin: 5px 0;
   padding: 10px 15px;
+  width: 100%;
 }
 
-/* line 74, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 76, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .input-field:focus {
   box-shadow: 0 0 5px #51cbee;
   border: 1px solid #51cbee;
+}
+
+/* line 81, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.con-mess {
+  height: 100px;
+}
+
+/* line 85, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.require-text {
+  text-align: center;
+  font-size: .8rem;
+}
+
+@media (min-width: 993px) {
+  /* line 92, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 993px) {
+  /* line 100, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  .col-1 {
+    width: 48%;
+  }
+}
+
+/* line 106, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.form-bottom {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* line 1, ../NetmattersRebuildTwo/scss/modules/_footer.scss */
