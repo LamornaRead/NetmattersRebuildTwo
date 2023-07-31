@@ -2603,6 +2603,31 @@ a {
   color: #212330;
 }
 
+/* line 1, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.page-title-container {
+  font-size: 0.7rem;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* line 7, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.bold {
+  font-weight: 600;
+}
+
+/* line 11, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.page-title {
+  font-weight: 400;
+  padding: 13px 0;
+  margin: 0;
+}
+
+/* line 17, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.title {
+  font-size: 2.3rem;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
 /* line 1, ../NetmattersRebuildTwo/scss/modules/_footer.scss */
 footer {
   background: #323544;
