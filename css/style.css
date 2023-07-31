@@ -2609,23 +2609,94 @@ a {
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
 }
 
-/* line 7, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+@media (max-width: 992px) {
+  /* line 1, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  .page-title-container {
+    border-top: 1px solid #000;
+  }
+}
+
+@media (max-width: 460px) {
+  /* line 1, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  .page-title-container {
+    display: none;
+  }
+}
+
+/* line 12, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .bold {
   font-weight: 600;
 }
 
-/* line 11, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 16, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .page-title {
   font-weight: 400;
   padding: 13px 0;
   margin: 0;
 }
 
-/* line 17, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+@media (max-width: 992px) {
+  /* line 22, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  .title-container {
+    background-color: #323544;
+    color: #fff;
+  }
+}
+
+/* line 28, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .title {
   font-size: 2.3rem;
   font-weight: 400;
-  padding: 20px 0;
+  padding: 35px 0;
+  margin: 0;
+}
+
+/* line 37, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.buisness-info {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* line 41, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.buisness-info p {
+  padding: 10px 0;
+}
+
+/* line 47, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.sales-email {
+  font-size: 1.7rem;
+  color: #926FB1;
+}
+
+/* line 50, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.sales-email:hover {
+  text-decoration: underline;
+}
+
+/* line 57, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.contact-form {
+  background-color: #DDDDDD;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* line 63, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* line 68, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.input-field {
+  outline: none;
+  margin: 5px 0;
+  padding: 10px 15px;
+}
+
+/* line 74, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.input-field:focus {
+  box-shadow: 0 0 5px #51cbee;
+  border: 1px solid #51cbee;
 }
 
 /* line 1, ../NetmattersRebuildTwo/scss/modules/_footer.scss */
