@@ -31,6 +31,72 @@
     padding: 35px 0;
     margin: 0;
 }
+//locations //////////////////////
+
+.location {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 700px;
+    min-width: 100px;
+    box-shadow: 0 3px 35px rgba(0,0,0,.1);
+    // margin-left: auto;
+    // margin-right: auto;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+
+
+.building-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+    min-width: 100px;
+}
+
+.border-box {
+    border: 1px solid lightgrey;
+    
+}
+
+.office-info {
+    padding: 30px;
+}
+
+.office-name {
+    font-size: 1.3rem;
+    font-weight: $font-weight--light;
+}
+
+.office-address {
+    font-weight: $font-weight--light;
+    color: #666666;
+}
+
+.phone-link {
+   font-size: 1.7rem;
+   font-weight: $font-weight--bold;
+   color: $web;
+   &:hover {
+    text-decoration: underline;
+   }
+}
+
+.view-more-btn {
+    background-color: $web;
+    &:hover {
+        background-color: darken($color: $web, $amount: 10%);
+    }
+}
+
+.map-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+    min-width: 100px;
+}
 
 //buisness info //////////////////
 
@@ -109,4 +175,19 @@
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    @include mq(small) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+//main page layout /////////////////////////
+
+.contact-section {
+    @include mq(x-large) {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 30px;
+    }
 }
