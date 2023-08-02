@@ -128,8 +128,10 @@ include ('inc/header.php');
                         <p class="buisness-info-text">Out of Hours IT Support <i class="fa-solid fa-angle-down"></i></p>
                     </div>
                     <div class="contact-form">
-                        <form action="">
-
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                            <?php
+                                $name = $company = $email = $telephone = $message = "";
+                            ?>
                             <div class="input-box">
                                 <div class="col-1">
                                     <label class="label" for="contact-name">Your Name <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
