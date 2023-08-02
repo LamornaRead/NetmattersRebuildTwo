@@ -2652,17 +2652,24 @@ a {
 }
 
 /* line 36, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.office-section {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+/* line 40, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .location {
   border-radius: 20px;
   width: 100%;
   max-width: 700px;
   min-width: 100px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  margin: 30px auto;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
 }
 
-/* line 50, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 53, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .building-image {
   display: flex;
   justify-content: center;
@@ -2671,51 +2678,51 @@ a {
   min-width: 100px;
 }
 
-/* line 58, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 61, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .border-box {
   border: 1px solid lightgrey;
 }
 
-/* line 63, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 66, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .office-info {
   padding: 30px;
 }
 
-/* line 67, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 70, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .office-name {
   font-size: 1.3rem;
   font-weight: 400;
 }
 
-/* line 72, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 75, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .office-address {
   font-weight: 400;
   color: #666666;
 }
 
-/* line 77, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 80, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .phone-link {
   font-size: 1.7rem;
   font-weight: 600;
   color: #926FB1;
 }
 
-/* line 81, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 84, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .phone-link:hover {
   text-decoration: underline;
 }
 
-/* line 86, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 89, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .view-more-btn {
   background-color: #926FB1;
 }
 
-/* line 88, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 91, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .view-more-btn:hover {
   background-color: #79539a;
 }
 
-/* line 93, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 96, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .map-image {
   display: flex;
   justify-content: center;
@@ -2724,29 +2731,29 @@ a {
   min-width: 100px;
 }
 
-/* line 103, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 106, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .buisness-info {
   font-weight: 600;
   font-size: 1rem;
 }
 
-/* line 108, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 111, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .buisness-info-text {
   padding: 10px 0;
 }
 
-/* line 112, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 115, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .sales-email {
   font-size: 1.7rem;
   color: #926FB1;
 }
 
-/* line 115, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 118, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .sales-email:hover {
   text-decoration: underline;
 }
 
-/* line 122, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 125, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .contact-form {
   background-color: #DDDDDD;
   padding: 30px;
@@ -2755,13 +2762,13 @@ a {
   margin-bottom: 40px;
 }
 
-/* line 130, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 133, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .label {
   font-size: 1rem;
   font-weight: 600;
 }
 
-/* line 135, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 138, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .input-field {
   outline: none;
   margin: 5px 0;
@@ -2769,25 +2776,25 @@ a {
   width: 100%;
 }
 
-/* line 142, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 145, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .input-field:focus {
   box-shadow: 0 0 5px #51cbee;
   border: 1px solid #51cbee;
 }
 
-/* line 147, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 150, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .con-mess {
   height: 100px;
 }
 
-/* line 151, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 154, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .require-text {
   text-align: center;
   font-size: .8rem;
 }
 
 @media (min-width: 993px) {
-  /* line 158, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  /* line 161, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
   .input-box {
     display: flex;
     flex-wrap: wrap;
@@ -2796,13 +2803,13 @@ a {
 }
 
 @media (min-width: 993px) {
-  /* line 166, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  /* line 169, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
   .col-1 {
     width: 48%;
   }
 }
 
-/* line 172, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 175, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .form-bottom {
   display: flex;
   flex-direction: column-reverse;
@@ -2812,7 +2819,7 @@ a {
 }
 
 @media (min-width: 461px) {
-  /* line 172, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  /* line 175, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
   .form-bottom {
     flex-direction: row;
     justify-content: space-between;
@@ -2820,8 +2827,27 @@ a {
   }
 }
 
+/* line 190, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.offices {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: 993px) {
+  /* line 190, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  .offices {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  /* line 198, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  .offices .location {
+    width: 48%;
+  }
+}
+
 @media (min-width: 1244px) {
-  /* line 187, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  /* line 205, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
   .contact-section {
     display: flex;
     flex-direction: row-reverse;

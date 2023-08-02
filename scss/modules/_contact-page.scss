@@ -33,15 +33,18 @@
 }
 //locations //////////////////////
 
+.office-section {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
 .location {
     border-radius: 20px;
     width: 100%;
     max-width: 700px;
     min-width: 100px;
     box-shadow: 0 3px 35px rgba(0,0,0,.1);
-    // margin-left: auto;
-    // margin-right: auto;
-    margin: 30px auto;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
 }
 
@@ -183,6 +186,21 @@
 }
 
 //main page layout /////////////////////////
+
+.offices {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include mq(large) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        & {
+            .location {
+                width: 48%;
+            }
+        }
+    }
+}
 
 .contact-section {
     @include mq(x-large) {
