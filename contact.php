@@ -2,6 +2,29 @@
 
 include ('inc/header.php');
 
+$input = [
+    'contact-name' => '',
+    'company-name' => '',
+    'contact-email' => '',
+    'contact-number' => '',
+    'contact-message' => ''
+];
+$errors = [
+    'contact-name' => '',
+    'company-name' => '',
+    'contact-email' => '',
+    'contact-number' => '',
+    'contact-message' => ''
+];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $input['contact-name'] = filter_input(INPUT_POST, 'contact-name', FILTER_SANITIZE_STRING);
+        $input['company-name'] = filter_input(INPUT_POST, 'company-name', FILTER_SANITIZE_STRING);
+        $input['contact-email'] = filter_input(INPUT_POST, ' contact-email', FILTER_SANITIZE_EMAIL);
+        $input['contact-number'] = filter_input(INPUT_POST, 'contact-number', FILTER_SANITIZE_NUMBER_INT);
+        $input['contact-message'] = filter_input(INPUT_POST, 'contact-message', FILTER_SANITIZE_STRING);
+  }
+
 ?>
             <div class="page-title-container">
                 <div class="container">
@@ -128,10 +151,8 @@ include ('inc/header.php');
                         <p class="buisness-info-text">Out of Hours IT Support <i class="fa-solid fa-angle-down"></i></p>
                     </div>
                     <div class="contact-form">
-                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-                            <?php
-                                $name = $company = $email = $telephone = $message = "";
-                            ?> 
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
                             <div class="input-box">
                                 <div class="col-1">
                                     <label class="label" for="contact-name">Your Name <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
