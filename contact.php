@@ -152,7 +152,8 @@ include ('inc/header.php');
                             </div>
                     
                                 <label class="label" for="contact-message">Message <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
-                                <textarea class="input-field con-mess" name="contact-message" id="contact-message"></textarea>
+                                <textarea class="input-field con-mess" name="contact-message" id="contact-message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send me an email?
+                                </textarea>
                             
                    
     
