@@ -1,29 +1,54 @@
 <?php
 
 include ('inc/header.php');
+include ('inc/functions.php');
 
-$input = [
-    'contact-name' => '',
-    'company-name' => '',
-    'contact-email' => '',
-    'contact-number' => '',
-    'contact-message' => ''
-];
-$errors = [
-    'contact-name' => '',
-    'company-name' => '',
-    'contact-email' => '',
-    'contact-number' => '',
-    'contact-message' => ''
-];
+$name = $company = $email = $telephone = $comment = "";
+$errors = [];
+$inputs = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $input['contact-name'] = filter_input(INPUT_POST, 'contact-name', FILTER_SANITIZE_STRING);
-        $input['company-name'] = filter_input(INPUT_POST, 'company-name', FILTER_SANITIZE_STRING);
-        $input['contact-email'] = filter_input(INPUT_POST, ' contact-email', FILTER_SANITIZE_EMAIL);
-        $input['contact-number'] = filter_input(INPUT_POST, 'contact-number', FILTER_SANITIZE_NUMBER_INT);
-        $input['contact-message'] = filter_input(INPUT_POST, 'contact-message', FILTER_SANITIZE_STRING);
+    $name = test_input($_POST["contact-name"]);
+    $company = test_input($_POST["company-name"]);
+    $email = test_input($_POST["contact-email"]);
+    $telephone = test_input($_POST["contact-number"]);
+    $comment = test_input($_POST["contact-message"]);
+
+    //validate name
+    if ($name === "") {
+        $errors['name'] = 'Please fill in name!';
+    } else {
+        $inputs['name'] = $name;
+    }
+
+    //validate company
+    if(count($errors) === 0) {
+        $inputs['company'] = 'none';
+    }
+
+
+    // validate email
+    if ($email === "") {
+        $errors['email'] = 'Please fill in email!';
+    } else {
+        $inputs['email'] = $email;
+    }
+
+    //validate number
+    if($telephone === "") {
+        $errors['telephone'] = 'Please fill in telephone number!';
+    } else {
+        $input['telephone'] = $telephone;
+    }
+
+    //validate message 
+    if ($comment === "") {
+        $errors['message'] = 'Please fill out a message for us!';
+    } else {
+        $inputs['message'] = $comment;
+    }
   }
+  
 
 ?>
             <div class="page-title-container">
@@ -173,15 +198,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                     
                                 <label class="label" for="contact-message">Message <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
-                                <textarea class="input-field con-mess" name="contact-message" id="contact-message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send me an email?
-                                </textarea>
+                                <textarea class="input-field con-mess" name="contact-message" id="contact-message"></textarea>
                             
                    
     
                             <div class="preference">
                                 <div class="marketing-checkbox">
-                                    <label id="checkbox"></label>
-                                    <input class="check-box" id="send-marketing-info" type="checkbox" value="">
+                                    <label id="checkbox" for="marketing"></label>
+                                    <input class="check-box" id="send-marketing-info" name="marketing" type="checkbox" value="">
                                     <span class="media">Please tick this box if you wish to recieve marketing information from us. Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we keep your data safe.</span>
                                 </div>
                             </div>
@@ -190,7 +214,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <button class="btn btn-primary">Send Enquiry</button>
                                 <p class="require-text"><i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i> Fields required</p>
                             </div>
-
+                            
+                            <?php 
+                            var_dump($errors);
+                            var_dump($inputs);
+                            ?>
                         </form>
                     </div>
                 </div>
