@@ -78,11 +78,14 @@
 }
 
 .phone-link {
-   font-size: 1.7rem;
+   font-size: 1.2rem;
    font-weight: $font-weight--bold;
    color: $web;
    &:hover {
     text-decoration: underline;
+   }
+   @include mq(medium) {
+    font-size: 1.7rem;
    }
 }
 
@@ -113,10 +116,13 @@
 }
 
 .sales-email {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     color: $web;
     &:hover {
         text-decoration: underline;
+    }
+    @include mq(medium) {
+        font-size: 1.7rem;
     }
 }
 
@@ -208,4 +214,20 @@
         flex-direction: row-reverse;
         gap: 30px;
     }
+}
+
+//errors 
+
+.error-box {
+    @extend %center;
+    background-color: #b34668;
+    border: 1px solid #9c3d5a;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    margin-top: 15px;
+}
+
+.error-message {
+    color: $white;
 }

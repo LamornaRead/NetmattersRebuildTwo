@@ -8,11 +8,12 @@ $errors = [];
 $inputs = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = test_input($_POST["contact-name"]);
-    $company = test_input($_POST["company-name"]);
-    $email = test_input($_POST["contact-email"]);
-    $telephone = test_input($_POST["contact-number"]);
-    $comment = test_input($_POST["contact-message"]);
+
+    $name = filter_input(INPUT_POST, 'contact-name', FILTER_SANITIZE_STRING);
+    $company = filter_input(INPUT_POST, 'company-name', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'contact-email', FILTER_SANITIZE_EMAIL);
+    $telephone = filter_input(INPUT_POST, 'contact-number', FILTER_SANITIZE_NUMBER_INT);
+    $comment = filter_input(INPUT_POST, 'contact-message', FILTER_SANITIZE_STRING);
 
     //validate name
     if ($name === "") {
@@ -21,24 +22,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $inputs['name'] = $name;
     }
 
-    //validate company
-    if(count($errors) === 0) {
-        $inputs['company'] = 'none';
-    }
-
-
-    // validate email
+    // validate email 
     if ($email === "") {
         $errors['email'] = 'Please fill in email!';
     } else {
-        $inputs['email'] = $email;
+        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+        if($email === false) {
+            $errors['email'] = 'Please enter a valid email!';
+        } else {
+            $inputs['email'] = $email;
+        }
     }
+
+   
 
     //validate number
     if($telephone === "") {
         $errors['telephone'] = 'Please fill in telephone number!';
     } else {
-        $input['telephone'] = $telephone;
+        $inputs['telephone'] = $telephone;
     }
 
     //validate message 
@@ -129,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     Wymondham, Norfolk,<br>
                                     NR18 0WZ  
                                 </p>
-                                <p class="phone-link"><a href="#">001603 70 40 20</a></p>
+                                <p class="phone-link"><a href="#">01603 70 40 20</a></p>
                                 <button class="btn view-more-btn">View More</button>
                             </div>
                         </div>
@@ -215,7 +217,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <p class="require-text"><i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i> Fields required</p>
                             </div>
                             
-                            <?php 
+                            <?php
+                            foreach ($errors as $err) {
+                                echo '<div class="error-box">';
+                                echo '<p class="error-message">' . $err . '</p>';
+                                echo '</div>';
+                            }
                             var_dump($errors);
                             var_dump($inputs);
                             ?>

@@ -6,7 +6,6 @@
     margin-right: auto;
     @include mq(medium) {
         width: 95%;
-
     }
     @include mq(large) {
         width: 90%;
