@@ -2,6 +2,7 @@
 
 include ('inc/header.php');
 include ('inc/functions.php');
+include ('inc/connect.php');
 
 $name = $company = $email = $telephone = $comment = $marketing = "";
 $errors = [];
@@ -62,9 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $inputs['marketing'] = 'declined';
     }
+
   }
   
-
 ?>
             <div class="page-title-container">
                 <div class="container">
@@ -181,7 +182,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
             <!-- contact form -->
         
-            <div>
+            <div id="contact-form">
                 <div class="container contact-section">
                     <div class="buisness-info">
                         <p class="buisness-info-text">Email us on:</p>
@@ -236,6 +237,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 echo '<div class="success-box">';
                                 echo '<p class="success-message">Submit Successful!';
                                 echo '</div>';
+                                
+                                $contactName = $inputs['name'];
+                                $contactCompany = $inputs['company'];
+                                $contactEmail = $inputs['email'];
+                                $contactNumber = $inputs['telephone'];
+                                $contactMessage = $inputs['message'];
+                                $contactMarketing = $inputs['marketing'];
+                                
+                                $sql = "INSERT INTO messages (fullname, company, email, telephone, comment, marketing) VALUES";
+                                $sql .= "('$contactName', '$contactCompany', '$contactEmail', '$contactNumber', '$contactMessage', '$contactMarketing')";
+
+                                $conn->query($sql);
                             } else {
                                 foreach ($errors as $err) {
                                     echo '<div class="error-box">';
@@ -243,8 +256,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     echo '</div>';
                                 }
                             }
-                            var_dump($errors);
-                            var_dump($inputs);
+                            // var_dump($errors);
+                            // var_dump($inputs);
                             ?>
                         </form>
                     </div>
