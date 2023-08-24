@@ -182,7 +182,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
             <!-- contact form -->
         
-            <div id="contact-form">
+            <div>
                 <div class="container contact-section">
                     <div class="buisness-info">
                         <p class="buisness-info-text">Email us on:</p>
@@ -192,7 +192,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <p class="buisness-info-text">Out of Hours IT Support <i class="fa-solid fa-angle-down"></i></p>
                     </div>
                     <div class="contact-form">
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                        <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
                             <div class="input-box">
                                 <div class="col-1">
@@ -227,7 +227,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                             
                             <div class="form-bottom">
-                                <button class="btn btn-primary">Send Enquiry</button>
+                                <button class="btn btn-primary" id="send-enquiry">Send Enquiry</button>
                                 <p class="require-text"><i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i> Fields required</p>
                             </div>
                             
