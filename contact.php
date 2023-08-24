@@ -3,7 +3,7 @@
 include ('inc/header.php');
 include ('inc/functions.php');
 
-$name = $company = $email = $telephone = $comment = "";
+$name = $company = $email = $telephone = $comment = $marketing = "";
 $errors = [];
 $inputs = [];
 
@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_input(INPUT_POST, 'contact-email', FILTER_SANITIZE_EMAIL);
     $telephone = filter_input(INPUT_POST, 'contact-number', FILTER_SANITIZE_NUMBER_INT);
     $comment = filter_input(INPUT_POST, 'contact-message', FILTER_SANITIZE_STRING);
+    $marketing = (isset($_POST['marketing']) and $_POST['marketing'] == true) ? true : false;
 
     //validate name
     if ($name === "") {
@@ -53,6 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['message'] = 'Please fill out a message for us!';
     } else {
         $inputs['message'] = $comment;
+    }
+    
+    //marketing 
+    if ($marketing === true) {
+        $inputs['marketing'] = 'accepted';
+    } else {
+        $inputs['marketing'] = 'declined';
     }
   }
   
@@ -212,7 +220,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="preference">
                                 <div class="marketing-checkbox">
                                     <label id="checkbox" for="marketing"></label>
-                                    <input class="check-box" id="send-marketing-info" name="marketing" type="checkbox" value="">
+                                    <input class="check-box" id="send-marketing-info" name="marketing" type="checkbox" value="true" <?= $marketing ? 'checked' : '' ?>>         
                                     <span class="media">Please tick this box if you wish to recieve marketing information from us. Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we keep your data safe.</span>
                                 </div>
                             </div>
