@@ -10,7 +10,7 @@ $inputs = [];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $name = filter_input(INPUT_POST, 'contact-name', FILTER_SANITIZE_STRING);
-    $company = filter_input(INPUT_POST, 'company-name', FILTER_SANITIZE_STRING);
+    $company = filter_input(INPUT_POST, 'contact-company', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'contact-email', FILTER_SANITIZE_EMAIL);
     $telephone = filter_input(INPUT_POST, 'contact-number', FILTER_SANITIZE_NUMBER_INT);
     $comment = filter_input(INPUT_POST, 'contact-message', FILTER_SANITIZE_STRING);
@@ -20,6 +20,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['name'] = 'Please fill in name!';
     } else {
         $inputs['name'] = $name;
+    }
+
+    //adding company
+    if ($company === '') {
+        $inputs['company'] = 'NA';
+    } else {
+        $inputs['company'] = $company;
     }
 
     // validate email 
@@ -33,8 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $inputs['email'] = $email;
         }
     }
-
-   
 
     //validate number
     if($telephone === "") {
@@ -218,10 +223,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                             
                             <?php
-                            foreach ($errors as $err) {
-                                echo '<div class="error-box">';
-                                echo '<p class="error-message">' . $err . '</p>';
+
+                            if (count($errors) === 0 && count($inputs) >= 4) {
+                                echo '<div class="success-box">';
+                                echo '<p class="success-message">Submit Successful!';
                                 echo '</div>';
+                            } else {
+                                foreach ($errors as $err) {
+                                    echo '<div class="error-box">';
+                                    echo '<p class="error-message">' . $err . '</p>';
+                                    echo '</div>';
+                                }
                             }
                             var_dump($errors);
                             var_dump($inputs);

@@ -6,7 +6,7 @@
 }
 
 /* line 19, ../NetmattersRebuildTwo/scss/utilities/_helper.scss */
-.icon-background, .icon-service, .news-articles, .error-box {
+.icon-background, .icon-service, .news-articles, .error-box, .success-box {
   margin-left: auto;
   margin-right: auto;
 }
@@ -2882,6 +2882,21 @@ a {
 
 /* line 231, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .error-message {
+  color: #fff;
+}
+
+/* line 235, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.success-box {
+  background-color: #0aa417;
+  border: 1px solid #058d11;
+  border-radius: 5px;
+  text-align: center;
+  width: 80%;
+  margin-top: 15px;
+}
+
+/* line 245, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.success-message {
   color: #fff;
 }
 

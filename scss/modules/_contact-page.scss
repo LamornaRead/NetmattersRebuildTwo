@@ -231,3 +231,17 @@
 .error-message {
     color: $white;
 }
+
+.success-box {
+    @extend %center;
+    background-color: #0aa417;
+    border: 1px solid #058d11;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    margin-top: 15px;
+}
+
+.success-message {
+    color: $white;
+}
