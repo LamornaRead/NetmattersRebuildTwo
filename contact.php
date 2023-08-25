@@ -182,7 +182,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
             <!-- contact form -->
         
-            <div>
+            <div id="my-form">
                 <div class="container contact-section">
                     <div class="buisness-info">
                         <p class="buisness-info-text">Email us on:</p>
