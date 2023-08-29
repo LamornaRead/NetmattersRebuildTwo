@@ -192,7 +192,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <p class="buisness-info-text">Out of Hours IT Support <i class="fa-solid fa-angle-down"></i></p>
                     </div>
                     <div class="contact-form">
-                        <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                        <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>#my-form">
 
                             <div class="input-box">
                                 <div class="col-1">
