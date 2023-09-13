@@ -223,7 +223,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                 <div class="col-1">
                                     <label class="label" for="contact-email">Your Email <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
-                                    <input class="input-field" id="contact-email" name="contact-email" type="text" value="">
+                                    <input class="input-field" id="contact-email" name="contact-email" type="email" value="">
                                 </div>
                                 <div class="col-1">
                                     <label class="label" for="contact-email">Your Telephone Number <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
@@ -249,7 +249,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <button class="btn btn-primary" id="send-enquiry">Send Enquiry</button>
                                 <p class="require-text"><i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i> Fields required</p>
                             </div>
-                            <span id="success"></span>
+                            <p id="name-error"></p>
+                            <p id="email-error"></p>
+                            <p id="number-error"></p>
+                            <p id="contact-error"></p>
+                            <p id="success"></p>
 
                             <?php 
                             
