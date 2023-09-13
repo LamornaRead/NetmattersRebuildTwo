@@ -2812,27 +2812,30 @@ a {
   margin: 5px 0;
   padding: 10px 15px;
   width: 100%;
+  height: 47px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
-/* line 168, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 171, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .input-field:focus {
   box-shadow: 0 0 5px #51cbee;
   border: 1px solid #51cbee;
 }
 
-/* line 173, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 176, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .con-mess {
   height: 100px;
 }
 
-/* line 177, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 180, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .require-text {
   text-align: center;
   font-size: .8rem;
 }
 
 @media (min-width: 993px) {
-  /* line 184, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  /* line 187, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
   .input-box {
     display: flex;
     flex-wrap: wrap;
@@ -2841,13 +2844,13 @@ a {
 }
 
 @media (min-width: 993px) {
-  /* line 192, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  /* line 195, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
   .col-1 {
     width: 48%;
   }
 }
 
-/* line 198, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 201, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .form-bottom {
   display: flex;
   flex-direction: column-reverse;
@@ -2857,7 +2860,7 @@ a {
 }
 
 @media (min-width: 461px) {
-  /* line 198, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  /* line 201, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
   .form-bottom {
     flex-direction: row;
     justify-content: space-between;
@@ -2865,7 +2868,7 @@ a {
   }
 }
 
-/* line 213, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 216, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .offices {
   display: flex;
   flex-direction: column;
@@ -2873,19 +2876,19 @@ a {
 }
 
 @media (min-width: 993px) {
-  /* line 213, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  /* line 216, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
   .offices {
     flex-wrap: wrap;
     flex-direction: row;
   }
-  /* line 221, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  /* line 224, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
   .offices .location {
     width: 48%;
   }
 }
 
 @media (min-width: 1244px) {
-  /* line 228, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+  /* line 231, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
   .contact-section {
     display: flex;
     flex-direction: row-reverse;
@@ -2893,7 +2896,7 @@ a {
   }
 }
 
-/* line 238, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 241, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .error-box {
   background-color: #b34668;
   border: 1px solid #9c3d5a;
@@ -2903,12 +2906,12 @@ a {
   margin-top: 15px;
 }
 
-/* line 248, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 251, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .error-message {
   color: #fff;
 }
 
-/* line 252, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 255, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .success-box {
   background-color: #0aa417;
   border: 1px solid #058d11;
@@ -2918,7 +2921,7 @@ a {
   margin-top: 15px;
 }
 
-/* line 262, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 265, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .success-message {
   color: #fff;
 }

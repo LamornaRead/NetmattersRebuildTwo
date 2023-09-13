@@ -1,21 +1,31 @@
 <?php
 
 include ('inc/header.php');
-include ('inc/functions.php');
 include ('inc/connect.php');
 
-$name = $company = $email = $telephone = $comment = $marketing = "";
+$name = $company = $email = $telephone = $comment = $marketing =  "";
 $errors = [];
 $inputs = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $name = filter_input(INPUT_POST, 'contact-name', FILTER_SANITIZE_STRING);
-    $company = filter_input(INPUT_POST, 'contact-company', FILTER_SANITIZE_STRING);
-    $email = filter_input(INPUT_POST, 'contact-email', FILTER_SANITIZE_EMAIL);
-    $telephone = filter_input(INPUT_POST, 'contact-number', FILTER_SANITIZE_NUMBER_INT);
-    $comment = filter_input(INPUT_POST, 'contact-message', FILTER_SANITIZE_STRING);
+    $name = test_input($_POST['contact-name']);
+    $company = test_input($_POST['contact-company']);
+    $email = test_input($_POST['contact-email']);
+    $telephone = test_input($_POST['contact-number']);
+    $comment = test_input($_POST['contact-message']);
     $marketing = (isset($_POST['marketing']) and $_POST['marketing'] == true) ? true : false;
+
+    // marketing 
+    if ($marketing === true) {
+        $marketing = 'accepted';
+    } else {
+        $marketing = 'declined';
+    }
+    // adding company
+    if ($company === '') {
+        $company = 'NA';
+    }
 
     //validate name
     if ($name === "") {
@@ -24,12 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $inputs['name'] = $name;
     }
 
-    //adding company
-    if ($company === '') {
-        $inputs['company'] = 'NA';
-    } else {
-        $inputs['company'] = $company;
-    }
 
     // validate email 
     if ($email === "") {
@@ -56,16 +60,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $inputs['message'] = $comment;
     }
-    
-    //marketing 
-    if ($marketing === true) {
-        $inputs['marketing'] = 'accepted';
-    } else {
-        $inputs['marketing'] = 'declined';
-    }
 
+    $sql = "INSERT INTO messages (fullname, company, email, telephone, comment, marketing) VALUES";
+    $sql .= "('$name', '$company', '$email', '$telephone', '$comment', '$marketing')";
+
+    $conn->query($sql);
   }
   
+  
+  function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 ?>
             <div class="page-title-container">
                 <div class="container">
@@ -202,24 +210,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                     </div>
                     <div class="contact-form">
-                        <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>#my-form">
+                        <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#my-form" onsubmit="return validateForm()">
 
                             <div class="input-box">
                                 <div class="col-1">
                                     <label class="label" for="contact-name">Your Name <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
-                                    <input class="input-field" id="contact-name" class="" name="contact-name" type="text" value="">
+                                    <input class="input-field" id="contact-name" name="contact-name" type="text" value="">
                                 </div>
                                 <div class="col-1">
                                     <label class="label" for="contact-company">Company Name</label>
-                                    <input class="input-field" id="contact-company" class="" name="contact-company" type="text" value="">
+                                    <input class="input-field" id="contact-company" name="contact-company" type="text" value="">
                                 </div>
                                 <div class="col-1">
                                     <label class="label" for="contact-email">Your Email <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
-                                    <input class="input-field" id="contact-email" class="" name="contact-email" type="text" value="">
+                                    <input class="input-field" id="contact-email" name="contact-email" type="text" value="">
                                 </div>
                                 <div class="col-1">
                                     <label class="label" for="contact-email">Your Telephone Number <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
-                                    <input class="input-field" id="contact-number" class="" name="contact-number" type="text" value="">
+                                    <input class="input-field" id="contact-number" name="contact-number" type="text" value="">
                                 </div>
                             </div>
                     
@@ -231,7 +239,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="preference">
                                 <div class="marketing-checkbox">
                                     <label id="checkbox" for="marketing"></label>
-                                    <input class="check-box" id="send-marketing-info" name="marketing" type="checkbox" value="true" <?= $marketing ? 'checked' : '' ?>>         
+                                    <input class="check-box" id="send-marketing-info" name="marketing" type="checkbox" value="true" <?= $marketing ? 'checked' : '' ?>>   
+                                         
                                     <span class="media">Please tick this box if you wish to recieve marketing information from us. Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we keep your data safe.</span>
                                 </div>
                             </div>
@@ -240,34 +249,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <button class="btn btn-primary" id="send-enquiry">Send Enquiry</button>
                                 <p class="require-text"><i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i> Fields required</p>
                             </div>
+                            <span id="success"></span>
+
+                            <?php 
                             
-                            <?php
-
-                            if (count($errors) === 0 && count($inputs) >= 4) {
-                                echo '<div class="success-box">';
-                                echo '<p class="success-message">Submit Successful!';
-                                echo '</div>';
-                                
-                                $contactName = $inputs['name'];
-                                $contactCompany = $inputs['company'];
-                                $contactEmail = $inputs['email'];
-                                $contactNumber = $inputs['telephone'];
-                                $contactMessage = $inputs['message'];
-                                $contactMarketing = $inputs['marketing'];
-                                
-                                $sql = "INSERT INTO messages (fullname, company, email, telephone, comment, marketing) VALUES";
-                                $sql .= "('$contactName', '$contactCompany', '$contactEmail', '$contactNumber', '$contactMessage', '$contactMarketing')";
-
-                                $conn->query($sql);
-                            } else {
-                                foreach ($errors as $err) {
-                                    echo '<div class="error-box">';
-                                    echo '<p class="error-message">' . $err . '</p>';
+                                if(count($errors) === 0 && count($inputs) >= 4) {
+                                    echo '<div class="success-box">';
+                                    echo '<p class="success-message">Submit Successful!';
                                     echo '</div>';
                                 }
-                            }
-                            // var_dump($errors);
-                            // var_dump($inputs);
+
                             ?>
                         </form>
                     </div>
@@ -282,13 +273,3 @@ include('inc/footer.php');
 
 
 ?>
-    <script src="js/jquery3.6.4.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/hamburger.js"></script>
-    <script src="js/sticky.js"></script>
-    <script src="js/cookie.js"></script>
-    <script src="js/slick/slick.min.js"></script>
-    <script src="js/banner.js"></script>
-    <script src="js/contact-page.js"></script>
-</body>
-</html>

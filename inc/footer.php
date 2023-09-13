@@ -449,3 +449,13 @@
             </div>
         </div>
     </div>
+    <script src="js/jquery3.6.4.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/sticky.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/contact-page.js"></script>
+</body>
+</html>
