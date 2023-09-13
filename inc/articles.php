@@ -2,7 +2,7 @@
    
    include("connect.php");
 
-   $sql = $conn->query("SELECT * FROM news");
+   $sql = $conn->query("SELECT * FROM news ORDER BY date_added DESC LIMIT 3");
    $article = $sql->fetchAll(PDO::FETCH_ASSOC);
 
    foreach($article as $row => $item) {

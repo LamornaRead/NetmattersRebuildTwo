@@ -24,7 +24,7 @@
                                 <li><a href="#" target="_blank">Cookie Policy</a></li> 
                                 <li><a href="#" target="_blank">Terms & Conditions</a></li>
                                 <li><a href="#" target="_blank">Environmental Policy</a></li> 
-                                <li><a href="#" target="_blank">Contact Us</a></li> 
+                                <li><a href="contact.php" target="_blank">Contact Us</a></li> 
                                 </ul>
                             </div>
                             <div class="info-list">
@@ -415,7 +415,7 @@
                         </li>
                         <li class="li-item-2">
                             <div class="li-heading-2">
-                                <a class="nav-li" href="#">Contact Us</a>  
+                                <a class="nav-li" href="contact.php">Contact Us</a>  
                             </div>
                             <div>
                                 <ul class="small-ul">
@@ -449,12 +449,3 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery3.6.4.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/hamburger.js"></script>
-    <script src="js/sticky.js"></script>
-    <script src="js/cookie.js"></script>
-    <script src="js/slick/slick.min.js"></script>
-    <script src="js/banner.js"></script>
-</body>
-</html>

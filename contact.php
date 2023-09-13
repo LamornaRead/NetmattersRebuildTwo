@@ -189,7 +189,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <p class="sales-email"><a href="#">sales@netmatters.com</a></p>
                         <p class="buisness-info-text">Buisness Hours:</p>
                         <p class="buisness-info-text">Monday - Friday 07:00 - 18:00</p>
-                        <p class="buisness-info-text">Out of Hours IT Support <i class="fa-solid fa-angle-down"></i></p>
+                        <p class="buisness-info-text"><a class="out-of-hours" href="">Out of Hours IT Support <i class="fa-solid fa-angle-down"></a></i></p>
+                        <div class="critical-support">
+                            <p class="hours-text">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                            <p>
+                                <strong>Monday - Friday 18:00 - 22:00</strong>
+                                <strong>Saturday 08:00 - 16:00</strong>
+                                <br>
+                                <strong>Sunday 10:00 - 18:00</strong>
+                            </p>
+                            <p class="hours-text">To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours  voicemail. A technician will contact you on the number provided within 45 minutes of your call. </p>
+                        </div>
                     </div>
                     <div class="contact-form">
                         <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>#my-form">
@@ -270,4 +280,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 include('inc/newsletter.php');
 include('inc/footer.php');
 
+
 ?>
+    <script src="js/jquery3.6.4.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/sticky.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/contact-page.js"></script>
+</body>
+</html>

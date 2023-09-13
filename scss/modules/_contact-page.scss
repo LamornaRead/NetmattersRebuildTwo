@@ -107,11 +107,15 @@
 //buisness info //////////////////
 
 .buisness-info {
-    font-weight: $font-weight--bold;
     font-size: 1rem;
+    @include mq(x-large) {
+        width: 30%;
+    }
+    
 }
 
 .buisness-info-text {
+    font-weight: $font-weight--bold;
     padding: 10px 0;
 }
 
@@ -124,6 +128,19 @@
     @include mq(medium) {
         font-size: 1.7rem;
     }
+}
+
+.hours-text {
+    font-weight: $font-weight--light;
+    color: grey;
+}
+
+.critical-support {
+    display: none;
+}
+
+.critical-support.active { 
+    display: block;
 }
 
 //contact form/////////////////////

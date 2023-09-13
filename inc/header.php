@@ -51,7 +51,7 @@
                                         <a class="btn support-btn" href="#" target="_blank"><i class="fa-solid fa-computer-mouse"></i> Support</a>
                                     </div>
                                     <div class="flo small-hidden medium-hidden">
-                                        <a class="btn contact-btn" href="#" target="_blank"><i class="fa-regular fa-paper-plane"></i> Contact</a>
+                                        <a class="btn contact-btn" href="contact.php" target="_blank"><i class="fa-regular fa-paper-plane"></i> Contact</a>
                                     </div>
                                     <div class="flo small-hidden">
                                         <form class="search-form" method="get">
