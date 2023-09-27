@@ -2904,16 +2904,15 @@ a {
   text-align: center;
   width: 80%;
   margin-top: 15px;
-  padding: 15px;
   color: #fff;
 }
 
-/* line 253, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 252, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .error-message {
   color: #fff;
 }
 
-/* line 257, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 256, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .success-box {
   background-color: #0aa417;
   border: 1px solid #058d11;
@@ -2923,7 +2922,7 @@ a {
   margin-top: 15px;
 }
 
-/* line 267, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+/* line 266, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
 .success-message {
   color: #fff;
 }

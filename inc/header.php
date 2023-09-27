@@ -38,7 +38,7 @@
                     <div class="container">
                         <div class="header-top">
                             <div class="main-logo">
-                                <a href="#" target="_blank">
+                                <a href="netmatters.lamorna-read.netmatters-scs.co.uk">
                                     <img class="net-logo" src="img/logo/f-logo.png" alt="Netmatters Logo">
                                 </a>
                             </div>

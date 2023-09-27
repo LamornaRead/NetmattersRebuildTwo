@@ -61,12 +61,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $inputs['message'] = $comment;
     }
 
-    $sql = "INSERT INTO messages (fullname, company, email, telephone, comment, marketing) VALUES";
-    $sql .= "('$name', '$company', '$email', '$telephone', '$comment', '$marketing')";
-
-    $conn->query($sql);
+    if(count($errors) === 0 && count($inputs) >= 4) {
+        $sql = "INSERT INTO messages (fullname, company, email, telephone, comment, marketing) VALUES";
+        $sql .= "('$name', '$company', '$email', '$telephone', '$comment', '$marketing')";
+    
+        $conn->query($sql);
+    
+        $_POST = [] ;
+      }
   }
-  
   
   function test_input($data) {
     $data = trim($data);
@@ -210,29 +213,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                     </div>
                     <div class="contact-form">
-                        <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#my-form" onsubmit="return validateForm()">
+                        <form id="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#my-form" >
 
                             <div class="input-box">
                                 <div class="col-1">
                                     <label class="label" for="contact-name">Your Name <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
-                                    <input class="input-field" id="contact-name" name="contact-name" type="text" value="">
+                                    <input class="input-field" id="contact-name" name="contact-name" type="text" value="<?php if(isset($_POST['contact-name'])) { echo htmlentities ($_POST['contact-name']); }?>">
                                 </div>
                                 <div class="col-1">
                                     <label class="label" for="contact-company">Company Name</label>
-                                    <input class="input-field" id="contact-company" name="contact-company" type="text" value="">
+                                    <input class="input-field" id="contact-company" name="contact-company" type="text" value="<?php if(isset($_POST['contact-company'])) { echo htmlentities ($_POST['contact-company']); }?>">
                                 </div>
                                 <div class="col-1">
                                     <label class="label" for="contact-email">Your Email <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
-                                    <input class="input-field" id="contact-email" name="contact-email" type="email" value="">
+                                    <input class="input-field" id="contact-email" name="contact-email" type="text" value="<?php if(isset($_POST['contact-email'])) { echo htmlentities ($_POST['contact-email']); }?>">
                                 </div>
                                 <div class="col-1">
                                     <label class="label" for="contact-email">Your Telephone Number <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
-                                    <input class="input-field" id="contact-number" name="contact-number" type="text" value="">
+                                    <input class="input-field" id="contact-number" name="contact-number" type="text" value="<?php if(isset($_POST['contact-number'])) { echo htmlentities ($_POST['contact-number']); }?>">
                                 </div>
                             </div>
                     
                                 <label class="label" for="contact-message">Message <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
-                                <textarea class="input-field con-mess" name="contact-message" id="contact-message"></textarea>
+                                <textarea class="input-field con-mess" name="contact-message" id="contact-message"><?php if(isset($_POST['contact-message'])) { echo htmlentities ($_POST['contact-message']); }?></textarea>
                             
                    
     
@@ -249,18 +252,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <button class="btn btn-primary" id="send-enquiry">Send Enquiry</button>
                                 <p class="require-text"><i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i> Fields required</p>
                             </div>
-                            <p id="name-error"></p>
-                            <p id="email-error"></p>
-                            <p id="number-error"></p>
-                            <p id="contact-error"></p>
                             <p id="success"></p>
 
                             <?php 
                             
                                 if(count($errors) === 0 && count($inputs) >= 4) {
                                     echo '<div class="success-box">';
-                                    echo '<p class="success-message">Submit Successful!';
+                                    echo '<p class="success-message">Submit Successful!</p>';
                                     echo '</div>';
+                                    
+                                } else {
+                                    foreach($errors as $err) {
+                                        echo '<div class="error-box">';
+                                        echo '<p class="error-message">' . $err . '</p>';
+                                        echo '</div>';
+                                    }
                                 }
 
                             ?>
