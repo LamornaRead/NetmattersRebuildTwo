@@ -60,7 +60,7 @@ function validateForm() {
         success.innerHTML = 'Fill Out Form Correctly';
         success.style.color = 'red';
         console.log('form failed');
-        console.log(fields.value);
+        // console.log(fields.value);
         return false;
     }
     return true;
