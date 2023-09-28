@@ -17,11 +17,10 @@
 
                         </div>
                         <div class="preference">
-                            <div class="marketing-checkbox">
-                                <label id="checkbox"></label>
-                                <input class="check-box" id="send-marketing-info" type="checkbox" value="">
+                            <label class="marketing-checkbox">
+                                <input class="check-box" id="send-marketing-info" name="marketing" type="checkbox" value="false"/>
                                 <span class="media">Please tick this box if you wish to recieve marketing information from us. Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we keep your data safe.</span>
-                            </div>
+                            </label>
                         </div>
                     
 

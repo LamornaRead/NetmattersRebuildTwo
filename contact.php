@@ -233,25 +233,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <input class="input-field" id="contact-number" name="contact-number" type="text" value="<?php if(isset($_POST['contact-number'])) { echo htmlentities ($_POST['contact-number']); }?>">
                                 </div>
                             </div>
-                    
+
+                            <div>
                                 <label class="label" for="contact-message">Message <i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i></label>
                                 <textarea class="input-field con-mess" name="contact-message" id="contact-message"><?php if(isset($_POST['contact-message'])) { echo htmlentities ($_POST['contact-message']); }?></textarea>
-                            
-                   
-    
+                            </div>
+        
+
                             <div class="preference">
-                                <div class="marketing-checkbox">
-                                    <label id="checkbox" for="marketing"></label>
-                                    <input class="check-box" id="send-marketing-info" name="marketing" type="checkbox" value="true" <?= $marketing ? 'checked' : '' ?>>   
-                                         
+                                <label class="marketing-checkbox">
+                                    <input class="check-box" id="send-marketing-info" name="marketing" type="checkbox" value="false" <?= $marketing ? 'checked' : '' ?> />
                                     <span class="media">Please tick this box if you wish to recieve marketing information from us. Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we keep your data safe.</span>
-                                </div>
+                                </label>
                             </div>
                             
                             <div class="form-bottom">
                                 <button class="btn btn-primary" id="send-enquiry">Send Enquiry</button>
                                 <p class="require-text"><i class="fa-solid fa-asterisk fa-2xs" style="color: #c60500;"></i> Fields required</p>
                             </div>
+
                             <p id="success"></p>
 
                             <?php 

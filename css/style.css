@@ -2927,6 +2927,11 @@ a {
   color: #fff;
 }
 
+/* line 270, ../NetmattersRebuildTwo/scss/modules/_contact-page.scss */
+.touch label > input[type=checkbox] + * {
+  pointer-events: none;
+}
+
 /* line 1, ../NetmattersRebuildTwo/scss/modules/_footer.scss */
 footer {
   background: #323544;

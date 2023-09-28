@@ -266,3 +266,7 @@
 .success-message {
     color: $white;
 }
+
+.touch label > input[type=checkbox] + * {
+    pointer-events: none;
+  }
